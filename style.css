@@ -13,6 +13,8 @@ html,body{
     align-items: start;
     width:100%;
     height:100%;
+    column-gap: 10px;
+    row-gap:15px;
 }
 
 .sidebar {
@@ -122,7 +124,7 @@ input[type=text] {
 }
 .main-content {
     display:grid;
-    grid-template-rows: 1fr repeat(3,2fr);
+    grid-template-rows: 1fr repeat(3,4fr);
     grid-template-columns: 3fr 1fr;
     column-gap:10px;
 }
@@ -132,12 +134,15 @@ input[type=text] {
     display:grid; 
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1fr 1fr;
-    column-gap:10px;
+    gap:10px;
+    
     /* grid-template-rows: repeat(auto-fit, minmax(150px, 1fr)); */
 }
 
 .card-container .card {
     border:solid;
+    border-radius: 25px;
+    padding:20px;
 }
 
 .announcement-box {
@@ -147,8 +152,21 @@ input[type=text] {
     /* border-radius:30px; */
 }
 
+.trend-container{
+    display:grid;
+    grid-template-rows: 1fr 4fr;
+}
 .trending-box {
     display:grid;
     grid-template-rows: 1fr 1fr 1fr;
     border:solid;
 }
+
+.card > p + p {
+    font-size:12px;
+}
+
+.announcement-box > div > div + div {
+    font-size: 8px;
+}
+
